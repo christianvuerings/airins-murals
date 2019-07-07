@@ -1,7 +1,7 @@
 {
-  "name": "victor-hugo",
+  "name": "airins-murals",
   "version": "1.0.0",
-  "description": "Victor Hugo is a Hugo boilerplate for creating truly epic websites!",
+  "description": "Airin O'Callaghans murals in SF bay area",
   "main": "index.js",
   "scripts": {
     "hugo": "gulp hugo",
