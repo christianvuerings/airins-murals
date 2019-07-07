@@ -1,5 +1,5 @@
 ---
-title: "Contact"
+title: "About"
 logo: "/img/logo.svg"
 contact_entries:
   - heading: Location
@@ -8,7 +8,7 @@ contact_entries:
     text: "Monday – Saturday: 9AM – 7PM We’re closed on Sundays"
 ---
 
-We’d love to get in touch with you and hear your ideas and
+We’love to get in touch with you and hear your ideas and
 questions. We strive to grow and improve constantly and your feedback
 is valuable for us.
 
