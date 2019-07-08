@@ -2,13 +2,26 @@
 
 @font-face {
   font-family: "Arvin-Regular";
-  src: url("./fonts/Arvin-Regular.ttf.woff") format("woff"),
-    url("./fonts/Arvin-Regular.ttf.svg#Arvin-Regular") format("svg"),
-    url("./fonts/Arvin-Regular.ttf.eot"),
-    url("./fonts/Arvin-Regular.ttf.eot?#iefix") format("embedded-opentype");
+  src: url("https://unpkg.com/airins-fonts@1.0.1/Arvin-Regular.ttf.woff")
+      format("woff"),
+    url("https://unpkg.com/airins-fonts@1.0.1/Arvin-Regular.ttf.svg#Arvin-Regular")
+      format("svg"),
+    url("https://unpkg.com/airins-fonts@1.0.1/Arvin-Regular.ttf.eot"),
+    url("https://unpkg.com/airins-fonts@1.0.1/Arvin-Regular.ttf.eot?#iefix")
+      format("embedded-opentype");
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "brittany_signatureregular";
+  src: url("https://unpkg.com/airins-fonts@1.0.1/brittanysignature-regular-webfont.woff2")
+      format("woff2"),
+    url("https://unpkg.com/airins-fonts@1.0.1/brittanysignature-regular-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .im-font-arvin {
   font-family: "Arvin-Regular";
 }
@@ -18,18 +31,81 @@
 }
 
 /* Navigation */
-.im-nav a {
-  color: #eb333f;
+.im-nav-logo {
+  min-width: 200px;
 }
-
+.im-nav a {
+  color: #f73848;
+  font-size: 30px;
+  font-weight: lighter;
+}
+a.im-nav-active {
+  font-weight: bold;
+}
 .im-divider-nav {
-  box-shadow: inset 0 -4px 0 #eb333f;
+  box-shadow: inset 0 -4px 0 #f73848;
   /* Link hover states */
   & a {
     transition: var(--hover-transition);
   }
   & ul a:hover,
   & ul a:focus {
-    box-shadow: inset 0 -4px 0 #fff;
+    box-shadow: inset 0px -4px 0 rgba(255, 255, 255, 1);
+  }
+}
+
+/* Jumbo */
+.im-jumbo {
+  min-height: 80vh;
+}
+.im-jumbo-title {
+  color: #f73848;
+  font-family: "brittany_signatureregular";
+  font-size: calc(1em + 12vw);
+  text-align: center;
+}
+
+/* About */
+.im-about {
+  align-items: center;
+  color: #f73848;
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+}
+.im-about-head {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  max-width: 500px;
+}
+.im-about-head > * {
+  padding: 5px 20px;
+}
+.im-about-links {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 20px;
+  margin-bottom: 100px;
+}
+.im-about-links a {
+  padding: 5px 10px;
+}
+
+@media only screen and (min-width: 750px) {
+  .im-about-head {
+    margin: 100px 0 20px;
+    max-width: 900px;
+    flex-direction: row;
+  }
+  .im-about-head > * {
+    padding: 0 10px;
+    width: 50%;
+  }
+  .im-about-links {
+    flex-direction: row;
+  }
+  .im-about-links li:not(:last-child)::after {
+    content: "//";
   }
 }

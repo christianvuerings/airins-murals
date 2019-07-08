@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<div class="im-about">
+	<div class="im-about-head">
+		<div class="im-about-picture">
+			<img src="{{ .Params.picture }}" alt="" />
+		</div>
+
+		<div class="im-about-content">
+			{{ .Content }}
+		</div>
+	</div>
+
+	<ul class="im-about-links">
+		{{ range .Params.about_links }}
+			<li>
+				<a href="{{ .link }}">{{ .label }}</a>
+			</li>
+		{{ end }}
+	</ul>
+
+</div>
+
+
+
+{{ end }}

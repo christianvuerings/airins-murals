@@ -11,7 +11,7 @@
     "start": "gulp server",
     "lint": "eslint src"
   },
-  "author": "",
+  "author": "Christian Vuerings",
   "license": "MIT",
   "dependencies": {
     "babel-core": "^6.26.3",

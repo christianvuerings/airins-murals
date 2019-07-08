@@ -1,19 +1,13 @@
 ---
 title: "About"
-logo: "/img/logo.svg"
-contact_entries:
-  - heading: Location
-    text: "3153 Lynn Avenue, South San Francisco, California 94080"
-  - heading: Working hours
-    text: "Monday – Saturday: 9AM – 7PM We’re closed on Sundays"
+picture: "/img/airin.jpg"
+about_links:
+  - label: "www.ireneocallghan.com"
+    link: "https://www.ireneocallghan.com"
+  - label: "irenemariaocallaghan@gmail.com"
+    link: "mailto:irenemariaocallaghan@gmail.com"
+  - label: "+1(415)5357260"
+    link: "tel:+1(415)5357260"
 ---
 
-We’love to get in touch with you and hear your ideas and
-questions. We strive to grow and improve constantly and your feedback
-is valuable for us.
-
-<h3 class="f4 b lh-title mb2">How can I get…?</h3>
-
-You can also use the form below for any inquiries about coffee
-availability, monthly subscriptions and scheduling a 1-on-1 session
-with our baristas. Don’t be shy, drop us a line!
+Hello, my name is Irene O’Callaghan, but my family calls me Airin. So you can call me Airin. Together with my boyfriend, a golden retriever and the rest of our dreams we live in Berkeley, California. Originally I am from Barcelona and The Netherlands, and three years ago I moved to the Bay area to pursue my carreer in illustration. I love designing my murals and make a tailor made piece in your home for you and your family. I specialize in children’s rooms and nurseries, but I am open to other fields aswell.

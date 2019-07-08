@@ -1,15 +1,16 @@
-<nav class="im-nav overflow-x-scroll overflow-x-visible-ns flex justify-between items-center center im-bg-taupe im-divider-nav relative">
+<nav class="im-nav overflow-x-scroll overflow-x-visible-ns flex justify-between items-center center im-divider-nav relative">
 
 	<!-- Logo -->
-	<a href="/" class="pa3 db mr4 h-100 w3 flex-none">
-		<img src="/img/logo.svg" alt="Kaldi logo" class="br0 db mb0 w-100"/>
+	<a href="/" class="im-nav-logo pl3 pr3 db mr4 h-100 w3 flex-none">
+		<img src="/img/im-logo.svg" alt="Airin's Murals Logo" class="br0 db mb0 w-100" width="400"/>
 	</a>
 
+	{{ $currentPage := . }}
 	<!-- Primary Nav -->
 	<ul class="flex b grey-3">
-		<li><a href="/murals" class="im-font-arvin pa3 no-underline db">Murals</a></li>
-		<li><a href="/pricing" class="im-font-arvin pa3 no-underline db">Pricing</a></li>
-		<li><a href="/about" class="im-font-arvin pa3 no-underline db">About</a></li>
+		<li><a href="/murals" class="{{ if eq $currentPage.Title "Murals" }}im-nav-active{{ end }} im-font-arvin pa3 no-underline db">Murals</a></li>
+		<li><a href="/pricing" class="{{ if eq $currentPage.Title "Pricing" }}im-nav-active{{ end }} im-font-arvin pa3 no-underline db">Pricing</a></li>
+		<li><a href="/about" class="{{ if eq $currentPage.Title "About" }}im-nav-active{{ end }} im-font-arvin pa3 no-underline db">About</a></li>
 	</ul>
 
 </nav>
