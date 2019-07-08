@@ -50,13 +50,13 @@ a.im-nav-active {
   }
   & ul a:hover,
   & ul a:focus {
-    box-shadow: inset 0px -4px 0 rgba(255, 255, 255, 1);
+    box-shadow: inset 0px -4px 0 rgba(255, 255, 255, 0.8);
   }
 }
 
 /* Jumbo */
 .im-jumbo {
-  min-height: 80vh;
+  min-height: 90vh;
 }
 .im-jumbo-title {
   color: #f73848;
@@ -92,7 +92,7 @@ a.im-nav-active {
   padding: 5px 10px;
 }
 
-@media only screen and (min-width: 750px) {
+@media (--breakpoint-medium) {
   .im-about-head {
     margin: 100px 0 20px;
     max-width: 900px;
@@ -104,6 +104,9 @@ a.im-nav-active {
   }
   .im-about-links {
     flex-direction: row;
+  }
+  .im-about-links li {
+    white-space: nowrap;
   }
   .im-about-links li:not(:last-child)::after {
     content: "//";

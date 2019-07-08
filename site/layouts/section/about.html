@@ -14,7 +14,7 @@
 	<ul class="im-about-links">
 		{{ range .Params.about_links }}
 			<li>
-				<a href="{{ .link }}">{{ .label }}</a>
+				<a {{ printf "href=%q" .link | safeHTMLAttr }}>{{ .label }}</a>
 			</li>
 		{{ end }}
 	</ul>
