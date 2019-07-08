@@ -18,13 +18,11 @@ const ContactEntries = ({ data }) =>
     ""
   );
 
-export default class ContactPreview extends React.Component {
+export default class AboutPreview extends React.Component {
   render() {
     const { entry, getAsset, widgetFor } = this.props;
-    const entryContactEntries = entry.getIn(["data", "contact_entries"]);
-    const contactEntries = entryContactEntries
-      ? entryContactEntries.toJS()
-      : [];
+    const entryAboutEntries = entry.getIn(["data", "about_entries"]);
+    const contactEntries = entryAboutEntries ? entryAboutEntries.toJS() : [];
     return (
       <div className="ph3 bg-off-white">
         <img

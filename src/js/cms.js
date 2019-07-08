@@ -5,7 +5,7 @@ import HomePreview from "./cms-preview-templates/home";
 import PostPreview from "./cms-preview-templates/post";
 import ProductsPreview from "./cms-preview-templates/products";
 import ValuesPreview from "./cms-preview-templates/values";
-import AboutPreview from "./cms-preview-templates/contact";
+import AboutPreview from "./cms-preview-templates/about";
 
 // Example of creating a custom color widget
 class ColorControl extends React.Component {
