@@ -112,3 +112,25 @@ a.im-nav-active {
     content: "//";
   }
 }
+
+/* Murals */
+.im-murals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 100px auto;
+  max-width: 900px;
+}
+
+.im-mural-link {
+  color: #f73848;
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  padding: 20px;
+  text-align: center;
+}
+.im-mural img {
+  max-width: 250px;
+  margin-bottom: 10px;
+}

@@ -2,8 +2,11 @@
 
 <ul class="im-murals">
 	{{ range .Params.murals }}
-		<li>
-			<a>{{ .title }}</a>
+		<li class="im-mural">
+			<a href="#" class="im-mural-link im-font-arvin">
+				<img src="{{ .coreImage }}" alt="" />
+				{{ .title }}
+			</a>
 		</li>
 	{{ end }}
 </ul>
