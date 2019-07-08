@@ -1,4 +1,5 @@
 ---
+title: "Murals"
 murals:
   - core-image: /img/mural-hello-balloon.png
     title: Hello balloon!
@@ -13,4 +14,3 @@ murals:
   - core-image: /img/mural-rainbow-day.png
     title: Rainbow day
 ---
-

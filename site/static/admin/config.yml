@@ -43,7 +43,7 @@ collections: # A list of collections the CMS should be able to edit
               - label: Link
                 name: link
                 widget: text
-      - file: "site/content/products/_index.md"
+      - file: "site/content/murals/_index.md"
         label: "Murals Page"
         name: "Murals"
         fields:

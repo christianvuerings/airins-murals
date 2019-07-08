@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+<ul class="im-murals">
+	{{ range .Params.murals }}
+		<li>
+			<a>{{ .title }}</a>
+		</li>
+	{{ end }}
+</ul>
+
+{{ end }}
