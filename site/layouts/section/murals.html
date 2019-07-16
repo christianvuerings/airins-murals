@@ -3,12 +3,69 @@
 <ul class="im-murals">
 	{{ range .Params.murals }}
 		<li class="im-mural">
-			<a href="#" class="im-mural-link im-font-arvin">
+			<a href="{{ anchorize .title }}" class="im-mural-link im-font-arvin" data-mural="{{ dict "title" .title "images" .images "testimonials" .testimonials | jsonify }}">
 				<img src="{{ .coreImage }}" alt="" />
 				{{ .title }}
 			</a>
 		</li>
 	{{ end }}
 </ul>
+
+<div class="im-modal">
+	<nav class="im-nav flex justify-center items-center center relative">
+		<a href="/" class="im-nav-logo pl3 pr3 db h-100 w3 flex-none">
+			<img src="/img/im-logo.svg" alt="Airin's Murals Logo" class="br0 db mb0 w-100" width="400"/>
+		</a>
+		<button class="im-font-arvin im-close-button"></button>
+	</nav>
+
+	<div class="im-modal-content">
+		<h1 class="im-modal-title"></h1>
+		<div class="im-modal-images"></div>
+		<div class="im-modal-testimonial"></div>
+	</div>
+</div>
+
+<script>
+	const modal = document.querySelector('.im-modal');
+	const closeButton = document.querySelector('.im-close-button');
+	const modalTitle = document.querySelector('.im-modal-title');
+	const modalImages = document.querySelector('.im-modal-images');
+	const modalTestimonial = document.querySelector('.im-modal-testimonial');
+
+	const openModal = (event) => {
+		event.preventDefault();
+		event.stopPropagation();
+
+		modal.classList.toggle('im-modal-open');
+		const link = event.target.closest("a");
+		const data = link.getAttribute('data-mural');
+		const json = JSON.parse(data);
+
+		modalTitle.innerHTML = json.title;
+		modalImages.innerHTML = `${(json.images || []).map(image => `
+			<img src="${image.image.image}" alt="${image.image.alt}" />`).join("")}`;
+		modalTestimonial.innerHTML = `${(json.testimonials || []).map(testimonial => `
+			<div class="im-modal-testimonial"><em>&ldquo;${testimonial.quote}&rdquo;</em> - ${testimonial.author}</div>`)}`
+
+		// history.pushState(null, null, link.getAttribute('href'))
+
+		console.log();
+	};
+
+	const closeModal = (event) => {
+		event.preventDefault();
+		event.stopPropagation();
+
+		modal.classList.toggle('im-modal-open');
+	};
+
+
+	const links = document.querySelectorAll('.im-mural-link');
+	[...links].forEach(link => {
+		link.addEventListener('click', openModal);
+	})
+	closeButton.addEventListener('click', closeModal);
+</script>
 
 {{ end }}

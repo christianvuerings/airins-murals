@@ -33,12 +33,20 @@
 /* Navigation */
 .im-nav-logo {
   min-width: 200px;
+  padding: 20px;
 }
 .im-nav a {
   color: #f73848;
   font-size: 30px;
   font-weight: lighter;
+  padding: 10px;
 }
+@media screen and (min-width: 400px) {
+  .im-nav a {
+    padding: 1rem;
+  }
+}
+
 a.im-nav-active {
   font-weight: bold;
 }
@@ -118,8 +126,13 @@ a.im-nav-active {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 100px auto;
+  margin: 20px auto;
   max-width: 900px;
+}
+@media screen and (min-width: 400px) {
+  .im-murals {
+    margin: 100px auto;
+  }
 }
 
 .im-mural-link {
@@ -133,4 +146,100 @@ a.im-nav-active {
 .im-mural img {
   max-width: 250px;
   margin-bottom: 10px;
+}
+
+/* */
+.im-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #fff; /* Fallback color */
+}
+.im-modal-open {
+  display: block;
+}
+.im-modal .im-nav-logo {
+  padding: 20px 20px 100px;
+}
+.im-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.im-modal-title {
+  color: #f73848;
+  font-family: "Arvin-Regular";
+  font-size: 60px;
+  font-weight: 400;
+  padding: 0 20px 30px;
+  text-align: center;
+}
+.im-modal-images {
+  display: flex;
+  max-height: 410px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  margin: 0 30px;
+  max-width: 1000px;
+}
+.im-modal-images img {
+  height: 380px;
+  width: 380px;
+  padding: 0 10px;
+}
+.im-modal-images img:first-child {
+  padding-left: 0;
+}
+.im-modal-images img:last-child {
+  padding-right: 0;
+}
+
+.im-modal-testimonial {
+  color: #f73848;
+  font-family: "Arvin-Regular";
+  max-width: 740px;
+  padding: 20px;
+}
+
+.im-close-button {
+  position: absolute;
+  padding: 30px;
+  border-radius: 50%;
+  right: 15px;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.7;
+  zoom: 0.65;
+}
+@media screen and (min-width: 400px) {
+  .im-close-button {
+    zoom: 1;
+  }
+}
+.im-close-button:focus,
+.im-close-button:hover {
+  opacity: 1;
+  background: #eee;
+}
+.im-close-button:before,
+.im-close-button:after {
+  position: absolute;
+  left: 28px;
+  content: " ";
+  height: 33px;
+  width: 4px;
+  top: 14px;
+  background-color: #f73848;
+}
+.im-close-button:before {
+  transform: rotate(45deg);
+}
+.im-close-button:after {
+  transform: rotate(-45deg);
 }
