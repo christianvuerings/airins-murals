@@ -1,11 +1,5 @@
 html {
-  font-size: var(--font-size);
-  @media (--breakpoint-medium) {
-    font-size: var(--font-size-m);
-  }
-  @media (--breakpoint-large) {
-    font-size: var(--font-size-l);
-  }
+  font-size: 22px;
 }
 
 body {
